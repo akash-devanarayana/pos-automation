@@ -1,4 +1,4 @@
 package org.ucsc.framework.pages;
 
-public class HomePage {
+public class _03_CustomerPage {
 }
