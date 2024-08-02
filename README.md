@@ -26,21 +26,22 @@ selenium-automation-framework
 ├── src
 │   ├── main
 │   │   └── java
-│   │       └── com
-│   │           └── yourname
+│   │       └── org
+│   │           └── ucsc
 │   │               └── framework
-│   │                   ├── BaseTest.java
 │   │                   └── pages
-│   │                       ├── HomePage.java
-│   │                       └── LoginPage.java
+│   │                       └── _01_LoginPage.java
+│   │                       └── _02_DashboardPage.java
+│   │                       └── _03_CustomerPage.java
+│   │                       └── _04_InventoryPage.java
+│   │                       └── _05_WorkOrderPage.java
+│   │                       └── BasePage.java
 │   └── test
 │       └── java
-│           └── com
-│               └── yourname
+│           └── org
+│               └── ucsc
 │                   └── tests
 │                       └── LoginTest.java
-└── src/test/resources
-    └── allure.properties
 ```
 
 ## Setup Instructions
