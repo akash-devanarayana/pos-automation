@@ -7,8 +7,6 @@ This is a simple Selenium automation framework built to test a POS using Java, M
 - [Prerequisites](#prerequisites)
 - [Project Structure](#project-structure)
 - [Setup Instructions](#setup-instructions)
-- [Running Tests](#running-tests)
-- [Generating Allure Reports](#generating-allure-reports)
 
 ## Prerequisites
 
@@ -26,21 +24,22 @@ selenium-automation-framework
 ├── src
 │   ├── main
 │   │   └── java
-│   │       └── com
-│   │           └── yourname
+│   │       └── org
+│   │           └── ucsc
 │   │               └── framework
-│   │                   ├── BaseTest.java
 │   │                   └── pages
-│   │                       ├── HomePage.java
-│   │                       └── LoginPage.java
+│   │                       └── _01_LoginPage.java
+│   │                       └── _02_DashboardPage.java
+│   │                       └── _03_CustomerPage.java
+│   │                       └── _04_InventoryPage.java
+│   │                       └── _05_WorkOrderPage.java
+│   │                       └── BasePage.java
 │   └── test
 │       └── java
-│           └── com
-│               └── yourname
+│           └── org
+│               └── ucsc
 │                   └── tests
 │                       └── LoginTest.java
-└── src/test/resources
-    └── allure.properties
 ```
 
 ## Setup Instructions
@@ -48,16 +47,15 @@ selenium-automation-framework
 1. **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/yourusername/selenium-automation-framework.git
-    cd selenium-automation-framework
+    git clone https://github.com/akash-devanarayana/pos-automation.git
     ```
 
 2. **Update WebDriver Path:**
 
-    In `BaseTest.java`, update the path to your WebDriver executable (e.g., `chromedriver`).
+    In `BasePage.java`, update the path to your WebDriver executable (e.g., `chromedriver`).
 
     ```java
-    System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+    System.setProperty("webdriver.chrome.driver", "enter path to web driver here");
     ```
 
 3. **Add Dependencies:**
@@ -87,18 +85,3 @@ selenium-automation-framework
         </dependency>
     </dependencies>
     ```
-
-## Running Tests
-
-To run the tests, you can use your IDE or Maven command:
-
-```bash
-mvn test
-```
-
-## Generating Allure Reports
-    
-```bash
-mvn allure:serve
-```
-This will start a local server and open the Allure report in your default browser.
