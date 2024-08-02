@@ -7,8 +7,6 @@ This is a simple Selenium automation framework built to test a POS using Java, M
 - [Prerequisites](#prerequisites)
 - [Project Structure](#project-structure)
 - [Setup Instructions](#setup-instructions)
-- [Running Tests](#running-tests)
-- [Generating Allure Reports](#generating-allure-reports)
 
 ## Prerequisites
 
