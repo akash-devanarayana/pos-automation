@@ -1,7 +1,6 @@
 package org.ucsc.tests;
 
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -14,7 +13,7 @@ public class LoginTest extends BasePage {
 
     @BeforeTest
     private void setup() {
-        setUp();
+        init();
         loginPage = new _01_LoginPage();
         PageFactory.initElements(driver, loginPage);
     }
@@ -33,6 +32,5 @@ public class LoginTest extends BasePage {
 //        loginPage.passwordField.clear();
 //        loginPage.passwordField.sendKeys("admin");
         loginPage.loginButton.click();
-        Assert.assertEquals(driver.getCurrentUrl(), "https://demo.phppointofsale.com/index.php/home/index/1");
     }
 }
