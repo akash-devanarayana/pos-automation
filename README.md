@@ -53,7 +53,7 @@ selenium-automation-framework
 
 2. **Update WebDriver Path:**
 
-    In `BaseTest.java`, update the path to your WebDriver executable (e.g., `chromedriver`).
+    In `BasePage.java`, update the path to your WebDriver executable (e.g., `chromedriver`).
 
     ```java
     System.setProperty("webdriver.chrome.driver", "enter path to web driver here");
