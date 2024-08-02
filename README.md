@@ -47,8 +47,7 @@ selenium-automation-framework
 1. **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/yourusername/selenium-automation-framework.git
-    cd selenium-automation-framework
+    git clone https://github.com/akash-devanarayana/pos-automation.git
     ```
 
 2. **Update WebDriver Path:**
