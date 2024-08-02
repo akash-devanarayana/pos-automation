@@ -88,7 +88,3 @@ selenium-automation-framework
         </dependency>
     </dependencies>
     ```
-    
-mvn allure:serve
-```
-This will start a local server and open the Allure report in your default browser.
