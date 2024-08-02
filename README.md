@@ -88,18 +88,7 @@ selenium-automation-framework
         </dependency>
     </dependencies>
     ```
-
-## Running Tests
-
-To run the tests, you can use your IDE or Maven command:
-
-```bash
-mvn test
-```
-
-## Generating Allure Reports
     
-```bash
 mvn allure:serve
 ```
 This will start a local server and open the Allure report in your default browser.
