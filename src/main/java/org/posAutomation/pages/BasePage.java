@@ -1,4 +1,4 @@
-package org.ucsc.framework.pages;
+package org.posAutomation.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
