@@ -1,6 +1,7 @@
 package org.posAutomation.functions;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.posAutomation.pages.BasePage;
 
 import static org.posAutomation.utils.Constants.TIMEOUT;
@@ -17,4 +18,22 @@ public class Webby extends BasePage {
         element.clear();
         element.sendKeys(textToSet);
     }
-}
+
+   /*public static void selectCheckbox(WebElement checkbox) {
+       smartWait(driver, TIMEOUT, checkbox);
+       if (!checkbox.isSelected()) {
+           checkbox.click();
+       }
+   }*/
+
+        public static void clear(WebElement element) {
+            element.clear();
+        }
+
+
+
+
+
+    }
+
+

@@ -13,17 +13,10 @@ public class LoginTest extends BasePage {
     private _01_LoginPage loginPage;
 
     @BeforeTest
-    private void setup() {
+    void setup() {
         init();
         loginPage = new _01_LoginPage();
         PageFactory.initElements(driver, loginPage);
-    }
-
-    @AfterTest
-    private void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
     }
 
     @Test
@@ -32,4 +25,12 @@ public class LoginTest extends BasePage {
         Webby.setText(loginPage.passwordField, "pointofsale");
         Webby.click(loginPage.loginButton);
     }
+
+  /*  @AfterTest
+    private void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }*/
+
 }

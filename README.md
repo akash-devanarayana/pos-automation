@@ -12,6 +12,7 @@ This is a simple Selenium automation framework built to test a POS using Java, M
 
 - Java JDK (8 or above)
 - Maven
+- Selenium 3 or higher
 - ChromeDriver (or another WebDriver of your choice)
 - IDE (IntelliJ IDEA, Eclipse, etc.)
 
@@ -27,6 +28,8 @@ selenium-automation-framework
 │   │       └── org
 │   │           └── ucsc
 │   │               └── framework
+│   │                   └── functions
+│   │                       └── Webby.java
 │   │                   └── pages
 │   │                       └── _01_LoginPage.java
 │   │                       └── _02_DashboardPage.java
@@ -34,6 +37,9 @@ selenium-automation-framework
 │   │                       └── _04_InventoryPage.java
 │   │                       └── _05_WorkOrderPage.java
 │   │                       └── BasePage.java
+│   │                   └── utils
+│   │                       └── Constants.java
+│   │                       └── Utils.java
 │   └── test
 │       └── java
 │           └── org
