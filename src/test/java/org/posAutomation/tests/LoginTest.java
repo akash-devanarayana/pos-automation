@@ -1,6 +1,7 @@
 package org.posAutomation.tests;
 
 import org.openqa.selenium.support.PageFactory;
+import org.posAutomation.functions.Webby;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -27,10 +28,8 @@ public class LoginTest extends BasePage {
 
     @Test
     public void ValidLoginTest() {
-        loginPage.usernameField.clear();
-        loginPage.usernameField.sendKeys("admin");
-//        loginPage.passwordField.clear();
-//        loginPage.passwordField.sendKeys("admin");
-        loginPage.loginButton.click();
+        Webby.setText(loginPage.usernameField, "admin");
+        Webby.setText(loginPage.passwordField, "pointofsale");
+        Webby.click(loginPage.loginButton);
     }
 }
