@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static org.posAutomation.utils.Constants.LOGIN_PAGE_URL;
 
 public class BasePage {
-    protected WebDriver driver;
+    protected static WebDriver driver;
 
     public void init() {
         driver = new ChromeDriver();
