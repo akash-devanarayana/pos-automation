@@ -9,7 +9,6 @@ public class BasePage {
     protected WebDriver driver;
 
     public void init() {
-        System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(LOGIN_PAGE_URL);
