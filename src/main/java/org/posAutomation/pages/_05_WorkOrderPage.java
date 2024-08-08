@@ -45,7 +45,7 @@ public class _05_WorkOrderPage {
     @FindBy(xpath = "//div[@class='name' and text()='Paul Walker']")
     public WebElement searchResult_Customer;
 
-    @FindBy(xpath = "//div[@class='name' and text()='Nissan Skyline (Vehicle) - $0.00']")
+    @FindBy(xpath = "//div[@class='name' and text()='Nissan Skyline (Vehicle) - $3,000.00']")
     public WebElement searchResult_Item;
 
     //*************** Description pop up window ***************
