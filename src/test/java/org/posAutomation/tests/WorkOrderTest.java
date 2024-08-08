@@ -1,14 +1,21 @@
 package org.posAutomation.tests;
 
 import org.posAutomation.functions.Webby;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class WorkOrderTest extends LoginTest {
-    @BeforeTest
+    @BeforeMethod
     public void setup() {
         super.setup();
         validLoginTest();
+        Webby.click(dashboardPage.modalDefaultOption);
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException exp) {
+            System.out.println(exp.getMessage());
+        }
     }
 
     @Test
