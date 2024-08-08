@@ -4,30 +4,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class _05_WorkOrderPage {
-
     //*************** Choose Location pop up window ***************
-
     @FindBy(xpath = "//*[@id=\"choose_location_modal\"]/div/div/div[2]/ul/li[1]/a")
     public WebElement chooseLocation_Default;
 
-
-
     //*************** Side navigation panel ***************
-
     @FindBy(xpath = "//i[@class='ion-hammer']")
     public WebElement iconWorkOrder;
 
-
-
     //*************** WorkOrder page ***************
-
     @FindBy(xpath = "//a[@id='new_work_order_btn']")
     public WebElement btnNewWorkOrder;
 
-
-
     //*************** NewWorkOrder pop up window ***************
-
     @FindBy(xpath = "//span[text()='×']")
     public WebElement btnClose_NewWorkOrder;
 
@@ -52,19 +41,14 @@ public class _05_WorkOrderPage {
     @FindBy(xpath = "//input[@value='Cancel']")
     public WebElement btnCancel_NewWorkOrder;
 
-
     //*************** Search Result ***************
-
     @FindBy(xpath = "//div[@class='name' and text()='Paul Walker']")
     public WebElement searchResult_Customer;
 
     @FindBy(xpath = "//div[@class='name' and text()='Nissan Skyline (Vehicle) - $0.00']")
     public WebElement searchResult_Item;
 
-
-
     //*************** Description pop up window ***************
-
     @FindBy(xpath = "//button[@class='bootbox-close-button close' and text()='×']")
     public WebElement btnClose_Description;
 
