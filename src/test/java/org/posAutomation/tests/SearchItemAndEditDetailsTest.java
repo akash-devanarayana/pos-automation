@@ -41,6 +41,10 @@ public class SearchItemAndEditDetailsTest extends LoginTest {
 
     @Test(priority = 2)
     public void editItem() {
+        // Navigate to item page
+        Webby.click(dashboardPage.sideBarInventoryDropdown);
+        Webby.click(dashboardPage.sideBarItemOption);
+
         //Edit the existing record
         Webby.click(inventoryPage.clickItemEditButton);
 
