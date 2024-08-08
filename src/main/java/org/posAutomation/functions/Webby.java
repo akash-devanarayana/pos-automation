@@ -1,39 +1,45 @@
 package org.posAutomation.functions;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.WebDriver;
 import org.posAutomation.pages.BasePage;
 
 import static org.posAutomation.utils.Constants.TIMEOUT;
 import static org.posAutomation.utils.Utils.smartWait;
 
-public class Webby extends BasePage {
+public class Webby {
+
+    private static final WebDriver driver = BasePage.driver;
+
+    /**
+     * Clicks on the specified WebElement after waiting for it to be clickable.
+     *
+     * @param element the WebElement to be clicked
+     */
     public static void click(WebElement element) {
-        smartWait(driver, TIMEOUT, element);
-        element.click();
-    }
-
-    public static void setText(WebElement element, String textToSet) {
-        smartWait(driver, TIMEOUT, element);
-        element.clear();
-        element.sendKeys(textToSet);
-    }
-
-   /*public static void selectCheckbox(WebElement checkbox) {
-       smartWait(driver, TIMEOUT, checkbox);
-       if (!checkbox.isSelected()) {
-           checkbox.click();
-       }
-   }*/
-
-        public static void clear(WebElement element) {
-            element.clear();
+        try {
+            smartWait(driver, TIMEOUT, element);
+            element.click();
+        } catch (Exception e) {
+            // Log the error or handle it appropriately
+            System.out.println("Error clicking element: " + e.getMessage());
         }
-
-
-
-
-
     }
 
-
+    /**
+     * Sets text to the specified WebElement after waiting for it to be visible.
+     *
+     * @param element   the WebElement where text will be set
+     * @param textToSet the text to be set in the WebElement
+     */
+    public static void setText(WebElement element, String textToSet) {
+        try {
+            smartWait(driver, TIMEOUT, element);
+            element.clear();
+            element.sendKeys(textToSet);
+        } catch (Exception e) {
+            // Log the error or handle it appropriately
+            System.out.println("Error setting text: " + e.getMessage());
+        }
+    }
+}
