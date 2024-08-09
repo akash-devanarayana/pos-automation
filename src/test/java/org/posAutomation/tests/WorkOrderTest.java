@@ -79,7 +79,7 @@ public class WorkOrderTest extends LoginTest {
         Assert.assertTrue(status);
     }
 
-    @Test(dependsOnMethods = {"addNewWorkOrder_TC01"})
+    @Test(dependsOnMethods = {"addNewWorkOrder"})
     public void deleteExistingWorkOrder() throws InterruptedException {
         Webby.click(dashboardPage.sideBarWorkOrdersDropdown);
 
