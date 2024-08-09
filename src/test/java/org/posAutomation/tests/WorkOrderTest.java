@@ -27,7 +27,7 @@ public class WorkOrderTest extends LoginTest {
     }
 
     public void searchWorkOrderById(String searchKey) throws InterruptedException {
-        //Search the above created Work Order
+        //Search the above-created Work Order
         Webby.setText(workOrderPage.inputSearch, searchKey);
         Webby.click(workOrderPage.btnSearch);
         Thread.sleep(3000);
@@ -102,7 +102,7 @@ public class WorkOrderTest extends LoginTest {
         Boolean statusBeforeDeletion = customerFirstName2.equals("Paul") & customerLastName2.equals("Walker") & itemName2.equals("Nissan Skyline");
         System.out.println("Found the searched Work Order? " + statusBeforeDeletion);
 
-        if (statusBeforeDeletion){
+        if (statusBeforeDeletion) {
             Webby.click(workOrderPage.selectTheFirstSearchResult);
             Thread.sleep(500); //wait till Delete button appears
             Webby.click(workOrderPage.btnDelete);
