@@ -1,6 +1,5 @@
 package org.posAutomation.tests;
 
-
 import org.posAutomation.functions.Webby;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -19,24 +18,14 @@ public class CustomersTest extends LoginTest {
         }
     }
 
-
-
     @Test
     public void addCustomer() throws InterruptedException {
-        Webby.click(customerPage.customersDropdown);
-        Thread.sleep(1000);
-        Webby.click(customerPage.customersPage);
-        Thread.sleep(1000);
+        Webby.click(dashboardPage.sideBarCustomersDropdown);
+        Webby.click(dashboardPage.sideBarCustomersOption);
         Webby.click(customerPage.addCustomer);
-        Thread.sleep(1000);
         Webby.setText(customerPage.firstName, "Test One");
-        Thread.sleep(1000);
         Webby.click(customerPage.test);
-        Thread.sleep(1000);
         Webby.click(customerPage.testSelect);
-        Thread.sleep(1000);
         Webby.click(customerPage.save);
-        Thread.sleep(1000);
     }
-
 }
