@@ -5,13 +5,14 @@ import org.openqa.selenium.support.FindBy;
 
 public class _05_WorkOrderPage {
 
-    //*************** Choose Location pop up window ***************
-    @FindBy(xpath = "//*[@id=\"choose_location_modal\"]/div/div/div[2]/ul/li[1]/a")
-    public WebElement chooseLocation_Default;
-
-    //*************** Side navigation panel ***************
-    @FindBy(xpath = "//i[@class='ion-hammer']")
-    public WebElement iconWorkOrder;
+//    //*************** Choose Location pop up window ***************
+//    @FindBy(xpath = "//*[@id=\"choose_location_modal\"]/div/div/div[2]/ul/li[1]/a")
+//    public WebElement chooseLocation_Default;
+//
+//    //*************** Side navigation panel ***************
+//    //@FindBy(xpath = "//i[@class='ion-hammer']")
+//    @FindBy(xpath = "//span[text()='Work Orders']")
+//    public WebElement iconWorkOrder;
 
     //*************** WorkOrder page ***************
     @FindBy(xpath = "//input[@id='search']")
@@ -58,8 +59,14 @@ public class _05_WorkOrderPage {
     @FindBy(xpath = "//div[@class='name' and text()='Paul Walker']")
     public WebElement searchResult_Customer;
 
-    @FindBy(xpath = "//div[@class='name' and starts-with(text(), 'Nissan Skyline')]")
+    @FindBy(xpath = "//div[@class='name' and contains(text(), 'Car')]")
     public WebElement searchResult_Item;
+
+//    @FindBy(xpath = "//div[@class='name' and text()='Paul Walker']")
+//    public WebElement searchResult_Customer;
+//
+//    @FindBy(xpath = "//div[@class='name' and starts-with(text(), 'Nissan Skyline')]")
+//    public WebElement searchResult_Item;
 
     @FindBy(xpath = "//td[@data-column_name='select_checkbox']")
     public WebElement selectTheFirstSearchResult;
@@ -92,4 +99,20 @@ public class _05_WorkOrderPage {
     //***************  WorkOrder Edit page ***************
     @FindBy(xpath = "//a[@id='done_btn']")
     public WebElement btnDone_WorkOrderEdit;
+
+    //***************  New Customer page ***************
+    @FindBy(xpath = "//input[@id='first_name']")
+    public WebElement inputFirstName;
+
+    @FindBy(xpath = "//input[@id='last_name']")
+    public WebElement inputLastName;
+
+    @FindBy(xpath = "//input[@id='email']")
+    public WebElement inputEmail;
+
+    @FindBy(xpath = "//input[@name='submitf']")
+    public WebElement btnSave_NewCustomer;
+
+    @FindBy(xpath = "//button[text()='Add Customer to Work Order']")
+    public WebElement btnAddCustomerToWorkOrder;
 }
