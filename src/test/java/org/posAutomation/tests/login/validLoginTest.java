@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 public class validLoginTest extends BasePage {
 
@@ -28,14 +29,18 @@ public class validLoginTest extends BasePage {
     @Test
     public void validLoginTest() {
 
+        SoftAssert softAssert = new SoftAssert();
+
         Webby.setText(loginPage.usernameField, "admin");
-        Webby.setText(loginPage.passwordField, "pointofsale");
+        Webby.setText(loginPage.passwordField, "hfcf");
         Webby.click(loginPage.loginButton);
 
         // Assertion - verify if successfully logged in
 
         WebElement dashboardIcon = driver.findElement(By.xpath("//i[@class='icon ti-dashboard']"));
-        Assert.assertTrue(dashboardIcon.isDisplayed(), "Couldn't logged in successfully");
+        softAssert.assertTrue(dashboardIcon.isDisplayed(), "Couldn't logged in successfully");
+
+        softAssert.assertAll();
 
     }
 
