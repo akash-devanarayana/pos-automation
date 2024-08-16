@@ -1,4 +1,5 @@
 package org.posAutomation.tests;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.posAutomation.functions.Webby;
@@ -67,7 +68,6 @@ public class LoginTest extends BasePage {
         Assert.assertTrue(errorMessage.isDisplayed(), "Error message is not displayed for invalid username and password.");
     }
 
-
     //Empty username
     @Test
     public void emptyUsernameTest() {
@@ -79,7 +79,6 @@ public class LoginTest extends BasePage {
         WebElement errorMessage = driver.findElement(By.xpath("//div[@class='error']"));
         Assert.assertTrue(errorMessage.isDisplayed(), "Error message is not displayed for empty username.");
     }
-
 
     //Empty password
     @Test
