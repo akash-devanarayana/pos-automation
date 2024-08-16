@@ -1,4 +1,4 @@
-package org.posAutomation.tests;
+package org.posAutomation.tests.login;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -9,7 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class LoginTest extends BasePage {
+public class invalidLogin04 extends BasePage {
 
     @BeforeMethod
     public void setup() {
@@ -24,15 +24,20 @@ public class LoginTest extends BasePage {
     }
 
 
-    @Test
-    public void validLoginTest() {
 
-        Webby.setText(loginPage.usernameField, "admin");
+    // Invalid Login - using empty username
+    @Test
+    public void invalidPasswordTest(){
+
+        Webby.setText(loginPage.usernameField, "");
         Webby.setText(loginPage.passwordField, "pointofsale");
         Webby.click(loginPage.loginButton);
 
-    }
+        // Assertion - verify that the error message is displayed
 
+        WebElement errorMessage = driver.findElement(By.xpath("//div[@class='error']"));
+        Assert.assertTrue(errorMessage.isDisplayed(), "Error message is not displayed.");
+    }
 
 
 }

@@ -1,4 +1,4 @@
-package org.posAutomation.tests;
+package org.posAutomation.tests.login;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -9,7 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class LoginTest extends BasePage {
+public class validLoginTest extends BasePage {
 
     @BeforeMethod
     public void setup() {
@@ -24,6 +24,7 @@ public class LoginTest extends BasePage {
     }
 
 
+    // Valid Login - using valid username and password
     @Test
     public void validLoginTest() {
 
@@ -31,8 +32,12 @@ public class LoginTest extends BasePage {
         Webby.setText(loginPage.passwordField, "pointofsale");
         Webby.click(loginPage.loginButton);
 
-    }
+        // Assertion - verify if successfully logged in
 
+        WebElement dashboardIcon = driver.findElement(By.xpath("//i[@class='icon ti-dashboard']"));
+        Assert.assertTrue(dashboardIcon.isDisplayed(), "Couldn't logged in successfully");
+
+    }
 
 
 }
