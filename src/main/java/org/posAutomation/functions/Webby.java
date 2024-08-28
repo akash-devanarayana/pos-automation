@@ -42,4 +42,18 @@ public class Webby {
             System.out.println("Error setting text: " + e.getMessage());
         }
     }
+
+
+    //To extract a text from a web element
+    public static String getText(WebElement element) {
+        try {
+            smartWait(driver, TIMEOUT, element);
+            return element.getText();
+        } catch (Exception e) {
+            // Log the error or handle it appropriately
+            System.out.println("Error extracting text: " + e.getMessage());
+            return null;
+        }
+    }
+
 }
