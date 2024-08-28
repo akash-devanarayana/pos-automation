@@ -26,7 +26,5 @@ public class BaseFunctions extends BasePage {
         Webby.setText(loginPage.passwordField, "pointofsale");
         Webby.click(loginPage.loginButton);
     }
-
-
 }
 

@@ -55,6 +55,13 @@ public class _05_WorkOrderPage {
     @FindBy(xpath = "//input[@value='Cancel']")
     public WebElement btnCancel_NewWorkOrder;
 
+    //*************** Toast message popup ***************
+    @FindBy(xpath = "    //div[@id='toast-container']/div/div[@class='toast-title']")
+    public WebElement toastMessageTitle;
+
+    @FindBy(xpath = "//div[@id='toast-container']/div/div[@class='toast-message']")
+    public WebElement toastMessageBody;
+
     //*************** Search Result ***************
     @FindBy(xpath = "//div[@class='name' and text()='Paul Walker']")
     public WebElement searchResult_Customer;
@@ -62,14 +69,14 @@ public class _05_WorkOrderPage {
     @FindBy(xpath = "//div[@class='name' and contains(text(), 'Car')]")
     public WebElement searchResult_Item;
 
-//    @FindBy(xpath = "//div[@class='name' and text()='Paul Walker']")
-//    public WebElement searchResult_Customer;
-//
-//    @FindBy(xpath = "//div[@class='name' and starts-with(text(), 'Nissan Skyline')]")
-//    public WebElement searchResult_Item;
-
     @FindBy(xpath = "//td[@data-column_name='select_checkbox']")
     public WebElement selectTheFirstSearchResult;
+
+    @FindBy(xpath = "//a[contains(text(),'POS')]")
+    public WebElement getWorkOrderIDText;
+
+    @FindBy(xpath = "//a[contains(text(),'POS')]/../../td[1]/label/span")
+    public WebElement getWorkOrderIDCheckBox;
 
     @FindBy(xpath = "//span[@class='text-warning']")
     public WebElement noSearchResultWarning;
@@ -115,4 +122,21 @@ public class _05_WorkOrderPage {
 
     @FindBy(xpath = "//button[text()='Add Customer to Work Order']")
     public WebElement btnAddCustomerToWorkOrder;
+
+    //***************  New Item page ***************
+    @FindBy(xpath = "//input[@id='name']")
+    public WebElement inputItemName;
+
+    @FindBy(xpath = "//*[@id=\"form\"]/div[1]/div[1]/div[2]/div[3]/div/div[1]/div[1]/input[@placeholder='Select Category']")
+    public WebElement clickOnCategoryField;
+
+    @FindBy(xpath = "//div/div[@class='selectize-dropdown-content']/div[text()='Car']")
+    public WebElement selectOptionCar;
+
+    @FindBy(xpath = "//div[@class='col-md-12']/div/input[@id='submitf']")
+    public WebElement btnSave_NewItem;
+
+    @FindBy(xpath = "//button[text()='Add Item To Work Order']")
+    public WebElement btnAddItemToWorkOrder;
+
 }
